@@ -67,6 +67,7 @@ module OpenSRS
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       http.read_timeout = http.open_timeout = @timeout if @timeout
       http.open_timeout = @open_timeout                if @open_timeout
+      http.ssl_version = :SSLv3
       http
     end
 
